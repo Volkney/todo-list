@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;700&family=Inconsolata:wght@200;300&display=swap');
+:root{
+    --primary: #CFDFDC;
+    --complimentary: #FFF8F5;
+    --black: #000000;
+    --black75: #535353;
+    --black50: #8C8C8C;
+    --black25: #C6C6C6;
+    --black10: #E8E7E7;
+    --black5: #F3F2F3;
+    --error: #F6DA8C;
+  --h1: 119px;
+  --h2: 84px;
+  --h3: 60px;
+  --h4: 42px;
+  --h5: 30px;
+  --h6: 21px;
+  --h7: 14px;
+  font-family: 'Lora', serif;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer {
+    font-family: 'Brygada 1918';
+    font-size: 36px;
+    font-weight: 700;
+}
