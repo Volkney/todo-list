@@ -55,7 +55,23 @@ body{
 /* main */
 .main{
     flex-grow: 1;
+    display: flex;
 }
+    .side-menu{
+        font-size: var(--h5);
+        font-weight: bold;
+        padding: 1.5rem;
+    }
+    li{
+        padding: 1rem;
+    }
+        .add-container{
+            display: flex;
+            border-top: 1px solid var(--black);
+            font-family: var(--mono-font);
+            font-size: var(--h6);
+            line-height: 40px;
+        }
 /* footer */
 .footer {
     height: 30px;
