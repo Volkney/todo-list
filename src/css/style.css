@@ -31,6 +31,9 @@ body{
     flex-direction: column;
     height: 115px;
 }
+.header > *{
+    padding-left: 2rem;
+}
     .upper-header{
         display: flex;
     }
@@ -71,6 +74,7 @@ body{
             font-family: var(--mono-font);
             font-size: var(--h6);
             line-height: 40px;
+            cursor: pointer;
         }
 /* footer */
 .footer {
