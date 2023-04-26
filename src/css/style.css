@@ -8,6 +8,7 @@
     --black25: #C6C6C6;
     --black10: #E8E7E7;
     --black5: #F3F2F3;
+    --light-blue: #E2F0F5;
     --error: #F6DA8C;
   --h1: 119px;
   --h2: 84px;
@@ -66,9 +67,41 @@ body{
         padding: 1.5rem;
     }
     li{
+        position: relative;
         padding: 1rem;
+        cursor: pointer;
+        transition: all 1s ease-in-out 1s; 
+        
     }
+    li:hover {
+        color: var(--black);
+      }
+      
+      li::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 60%;
+        height: 2px;
+        bottom: 0;
+        left: 15px;
+        background-color: var(--black);
+        transform-origin: top left;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      li:first-child:before {
+        width: 50%;
+      }
+      li:last-child:before {
+        width: 90%;
+      }
+      
+      li:hover::before {
+        transform: scaleX(1);
+      }
         .add-container{
+            margin-top: 1rem;
             display: flex;
             border-top: 1px solid var(--black);
             font-family: var(--mono-font);
