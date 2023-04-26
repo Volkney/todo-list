@@ -28,17 +28,41 @@ body{
 }
 .header{
     display: flex;
-    height: 75px;
+    flex-direction: column;
+    height: 115px;
 }
+    .upper-header{
+        display: flex;
+    }
+    .bottom-header{
+        display: flex;
+        border-top: 1px solid var(--black);
+        border-bottom: 1px solid var(--black);
+    }
+    .bottom-header > *{
+        padding: 0px 5px;
+    }
+        .todo-text{
+            line-height: 30px;
+            height: 30px;
+            background-color: var(--black);
+            color: var(--complimentary);
+        }
+        .burger-button{
+            cursor: pointer;
+          }
+
+/* main */
 .main{
     flex-grow: 1;
 }
+/* footer */
 .footer {
     height: 30px;
     font-weight: 700;
+    border-top: 1px solid var(--black);
 }
 .header, .footer {
-    border: 1px solid black;
     font-family: var(--mono-font);
     font-size: var(--h6);
     text-align: center;

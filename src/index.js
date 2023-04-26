@@ -2,7 +2,8 @@ import _ from 'lodash';
 import './reset.css';
 import './style.css';
 import Pencil from './todoIcon.svg';
-import Radio from './radio-btn.png';
+import Burger from './burgerBtn.svg';
+/* import Radio from './radio-btn.png'; */
 //get layout div
 const header = document.querySelector('.header');
 const body = document.querySelector('.main');
@@ -17,5 +18,14 @@ const logo = document.createElement('div');
 logo.classList.add('logo');
 logo.appendChild(logoImage);
 upperHeader.appendChild(logo);
-const logoText = document.createElement('div');
-logo.classList.add('');
+//add text to bottom header
+const burgerBtn = new Image();
+burgerBtn.src = Burger;
+burgerBtn.classList.add('burger-button');
+const todoText = document.createElement('div');
+todoText.classList.add('todo-text');
+todoText.textContent = 'todo list';
+bottomHeader.append(burgerBtn, todoText);
+//main children
+const sideMenu = document.createElement('div');
+sideMenu.classList.add('side-menu');
