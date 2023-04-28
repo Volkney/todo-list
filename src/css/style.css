@@ -21,6 +21,16 @@
   --mono-font: 'Inconsolata';
   font-family: 'Brygada 1918', serif;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Apply your own styles to the link */
+  a:hover {
+    color: var(--black75);
+    text-decoration: underline;
+  }
 body{
     width: 100vw;
     height: 100vh;
@@ -65,12 +75,18 @@ body{
         font-size: var(--h5);
         font-weight: bold;
         padding: 1.5rem;
+        margin-left: -20rem;
+    }
+    .closeBtn{
+        background: no-repeat url(../svg/closeBtn.svg);
+        margin-bottom: 30px;
+        margin-left: 8px;
     }
     li{
         position: relative;
         padding: 1rem;
         cursor: pointer;
-        transition: all 1s ease-in-out 1s; 
+        transition: all 0.2s ease-in-out 0.1s; 
         
     }
     li:hover {
@@ -90,11 +106,14 @@ body{
         transform: scaleX(0);
         transition: transform 0.3s ease;
       }
+      li:nth-child(2) {
+        width: 30%;
+      }
       li:first-child:before {
-        width: 50%;
+        width: 0%;
       }
       li:last-child:before {
-        width: 90%;
+        width: 70%;
       }
       
       li:hover::before {
@@ -103,11 +122,18 @@ body{
         .add-container{
             margin-top: 1rem;
             display: flex;
-            border-top: 1px solid var(--black);
+            border: 1px solid var(--black);
+            border-radius: 5px;
             font-family: var(--mono-font);
             font-size: var(--h6);
             line-height: 40px;
             cursor: pointer;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        .add-container:hover{
+            background-color: var(--error);
+            color: var(--black);
         }
 /* footer */
 .footer {

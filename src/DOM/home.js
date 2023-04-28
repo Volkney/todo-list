@@ -31,6 +31,7 @@ export default function initHome() {
     taskList.classList.add('task-list');
     //side menu content
     sideMenu.innerHTML = `<ul class='menu'>
+      <li class="closeBtn"></li>
       <li class="all">All</li>
       <li class="today">Today</li>
       <li class="week">Week</li>
@@ -41,17 +42,15 @@ export default function initHome() {
     const plusBtn = new Image();
     plusBtn.classList.add('plus-button');
     plusBtn.src = AddBtn;
-  
     // append the plusBtn and the 'add-project' element to the side menu
     const addProject = sideMenu.querySelector('.add-container');
     const addProjectText = document.createElement('div');
     addProjectText.classList.add('add-project');
     addProjectText.textContent = 'add a project';
     addProject.append(plusBtn, addProjectText);
-  
     sideMenu.appendChild(addProject);
-  
     // append the side menu and the task list to the body
     body.append(sideMenu, taskList);
-    return {header, body, footer}
+
+    return {header, body, footer, burgerBtn, sideMenu};
   }
