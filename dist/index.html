@@ -9,7 +9,17 @@
         <div class="upper-header"></div>
         <div class="bottom-header"></div>
       </div>
-      <div class="main"></div>
+      <div class="main">
+        <template id="todo-template">
+          <div class="current-tab"></div>
+          <li class="todo-item">
+            <input type="checkbox" class="todo-checkbox">
+            <span class="todo-text"></span>
+            <div class="todo-date"></div>
+            <button class="delete-todo">Delete</button>
+          </li>
+        </template>
+      </div>
       <div class="footer">inspiration take by <a href="https://worksinprogress.co/" target="_blank">work in progress</a></div>
     <script src="bundle.js"></script>
   </body>

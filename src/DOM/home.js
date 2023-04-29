@@ -1,11 +1,14 @@
 import Pencil from '../svg/todoIcon.svg';
 import Burger from '../svg/burgerBtn.svg';
 import AddBtn from '../svg/plus.svg';
+import initForm from './initForm';
 export default function initHome() {
     //get layout div
+    const test = 'hello';
     const header = document.querySelector('.header');
     const body = document.querySelector('.main');
     const footer = document.querySelector('.footer');
+    const todoTemplate = document.querySelector('#todo-template');
     //get children of header
     const upperHeader = document.querySelector('.upper-header');
     const bottomHeader = document.querySelector('.bottom-header');
@@ -47,10 +50,18 @@ export default function initHome() {
     const addProjectText = document.createElement('div');
     addProjectText.classList.add('add-project');
     addProjectText.textContent = 'add a project';
+    // prompt form when add project button is pressed
+    if (addProjectText) {
+      
+      addProjectText.addEventListener('click', () => {
+        initForm(addProjectText);
+      });
+    }
     addProject.append(plusBtn, addProjectText);
     sideMenu.appendChild(addProject);
     // append the side menu and the task list to the body
+    taskList.appendChild(todoTemplate);
     body.append(sideMenu, taskList);
 
-    return {header, body, footer, burgerBtn, sideMenu};
+    return { header, body, footer, test};
   }
