@@ -75,12 +75,14 @@ body{
     flex-grow: 1;
     display: flex;
 }
-
+/* .main > * {
+    border: 1px solid black;
+} */
     .side-menu{
         font-size: var(--h5);
         font-weight: bold;
         padding: 1.5rem;
-        margin-left: -20rem;
+        /* margin-left: -20rem; */
     }
     
     .closeBtn{
