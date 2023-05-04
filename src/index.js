@@ -12,7 +12,3 @@ const { header, body, footer } = initHome();
 const burgerBtn = document.querySelector('.burger-button');
 const sideMenu = document.querySelector('.side-menu');
 setupBurgerButtonEventListeners(burgerBtn, sideMenu);
-// Create a new instance of the Task class and add it to an array
-const tasks = [];
-const task = new Task('Task name', 'Due date');
-tasks.push(task);

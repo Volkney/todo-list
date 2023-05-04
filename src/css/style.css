@@ -9,7 +9,10 @@
     --black10: #E8E7E7;
     --black5: #F3F2F3;
     --light-blue: #E2F0F5;
+    --brown: #4C3806;
+    --red: #EB5D36;
     --error: #F6DA8C;
+    --white: #FFFFFF;
   --h1: 119px;
   --h2: 84px;
   --h3: 60px;
@@ -36,6 +39,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--complimentary);
 }
 .header{
     display: flex;
@@ -78,7 +82,7 @@ body{
         font-size: var(--h5);
         font-weight: bold;
         padding: 1.5rem;
-        /* margin-left: -20rem; */
+        margin-left: -20rem;
     }
     
     .closeBtn{
@@ -139,6 +143,58 @@ body{
             background-color: var(--error);
             color: var(--black);
         }
+
+        /* form style */
+        form{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        form .btn-project{
+            background-color: inherit;
+            color: var(--brown);
+            font-family: var(--mono-font);
+            border: none;
+            border-radius: 1px;
+            font-size: var(--h6);
+            border-radius: 5px;
+        }
+        .btn-container:hover{
+            background-color: var(--complimentary);
+            border-radius: 5px;
+        }
+        .btn-container{
+            display: flex;
+            margin-top: 5px;
+            gap: 15px;
+        }
+        .input-project {
+            font-size: 18px;
+            color: var(--brown);
+            border-radius: 5px;
+            border: 1px solid var(--brown);
+          }
+          input:focus{
+            border: 1px solid var(--red);
+          }
+          input{
+            background-color: var(--complimentary);
+          }
+    /* project display on the side menu */
+    .project-display{
+        border: 1px solid var(--black);
+        font-family: var(--mono-font);
+        font-size: var(--h6);
+        border-radius: 2px;
+        padding: 0.7rem;
+        margin-top: 10px;
+        background-color: var(--white);
+        color: var(--red);
+    }
+    .project-container{
+        background-color: var(--red);
+    }
 /* footer */
 .footer {
     height: 30px;

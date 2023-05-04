@@ -52,16 +52,14 @@ export default function initHome() {
     addProjectText.textContent = 'add a project';
     // prompt form when add project button is pressed
     if (addProjectText) {
-      
       addProjectText.addEventListener('click', () => {
-        initForm(addProjectText);
+        initForm(addProjectText, plusBtn, sideMenu);
       });
     }
     addProject.append(plusBtn, addProjectText);
     sideMenu.appendChild(addProject);
     // append the side menu and the task list to the body
-    taskList.appendChild(todoTemplate);
     body.append(sideMenu, taskList);
-
+    
     return { header, body, footer, test};
   }
